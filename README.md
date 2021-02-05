@@ -1,81 +1,31 @@
 # Hexo-Prism-Plugin [![NPM](https://img.shields.io/npm/dm/hexo-prism-plugin.svg)](https://www.npmjs.com/package/hexo-prism-plugin)
-Since `highlight.js` didn't support JSX syntax properly, I wrote this plugin to replace
-Hexo's default code highlight plugin.
+
+
+This is a copy of [https://github.com/ele828/hexo-prism-plugin](https://github.com/ele828/hexo-prism-plugin), and fix brackets symbol `{` and `}`.
+
+由于原版不维护，就Fork了一个版本，解决了花括号转义的问题。
 
 ## Install
 ```
+## use this
+npm i -S @ada87/hexo-prism-plugin
+## instead of this
 npm i -S hexo-prism-plugin
 ```
-## Usage
-Firstly, you should edit your `_config.yml` by adding following configuration.
-```yaml
-prism_plugin:
-  mode: 'preprocess'    # realtime/preprocess
-  theme: 'default'
-  line_number: false    # default false
-  custom_css: 'path/to/your/custom.css'     # optional
-```
-After that, check `highlight` option in `_config.yml`. Make sure that default code highlight plugin is disabled.
-```yaml
-highlight:
-  enable: false
-```
-Finally, clean and re-generate your project by running following commands:
+
+Or modify `package.json` and reinstall package:
 
 ```
-hexo clean
+"hexo-prism-plugin" => "@ada87/hexo-prism-plugin"
 ```
 
-```
-hexo generate
-```
+## 安装
 
-## Options
-- mode:
-  - realtime  (Parse code on browser in real time)
-  - preprocess  (Preprocess code in node)
+使用 `npm i -S @ada87/hexo-prism-plugin` 安装，
 
-- theme:
-  - default
-  - coy
-  - dark
-  - funky
-  - okaidia
-  - solarizedlight
-  - tomorrow
-  - twilight
-  - atom-dark
-  - base16-ateliersulphurpool.light
-  - cb
-  - duotone-dark
-  - duotone-earth
-  - duotone-forest
-  - duotone-light
-  - duotone-sea
-  - duotone-space
-  - ghcolors
-  - hopscotch
-  - pojoaque
-  - vs
-  - xonokai
+或者直接修改 `package.json` 将插件名称改为 `@ada87/hexo-prism-plugin` 即可。
 
-- line_number:
-  - true (Show line numbers)
-  - false (Default, Hide line numbers)
+欢迎逛我的 hexo 博客 : 
 
-- no_assets
-  - true (Stop loading asset files)
-  - false (Default, load script and stylesheets files)
-
-## Themes
-You can check out prism-themes project for additional theme preview:
-
-https://github.com/PrismJS/prism-themes#available-themes
-
-## Supported languages
-You could find the supported languages here:
-
-http://prismjs.com/#languages-list
-
-## License
-MIT
+* https://www.xdnote.com/ 
+* https://vis.zone/blog/ 
